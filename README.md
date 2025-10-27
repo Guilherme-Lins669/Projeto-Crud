@@ -44,10 +44,13 @@ Cada tarefa possui:
 
 ## Crie um ambiente virtual e instale as dependências:
 
-python -m venv venv
-source venv/bin/activate  # Linux
-venv\Scripts\activate     # Windows
-pip install flask
+- python -m venv venv
+
+- source venv/bin/activate  # Linux
+
+- venv\Scripts\activate     # Windows
+
+- pip install flask
 
 ## Execute o servidor:
 
