@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Lista de Tarefas</h2>
+
+<div class="tarefas-container">
+    {% for tarefa in tarefas %}
+    <div class="tarefa-card {{ tarefa['prioridade']|lower }}">
+        <h3>{{ tarefa['titulo'] }}</h3>
+        <p>{{ tarefa['descricao'] }}</p>
+        <p><strong>Vencimento:</strong> {{ tarefa['data_vencimento'] }}</p>
+        <p><strong>Status:</strong> {{ tarefa['status'] }}</p>
+
+        <div class="acoes">
+            <a href="{{ url_for('edit', id=tarefa['id']) }}" class="btn">Editar</a>
+            <button class="btn delete" onclick="abrirModal({{ tarefa['id'] }}, '{{ tarefa['titulo'] }}')">Excluir</button>
+        </div>
+    </div>
+    {% else %}
+    <p>Sem tarefas cadastradas.</p>
+    {% endfor %}
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h3>Confirmar Exclusão</h3>
+        <p id="modal-text"></p>
+        <form id="delete-form" method="POST">
+            <div class="modal-buttons">
+                <button type="button" class="btn" onclick="fecharModal()">Cancelar</button>
+                <button type="submit" class="btn delete">Excluir</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+function abrirModal(id, titulo) {
+    document.getElementById('modal').style.display = 'flex';
+    document.getElementById('modal-text').innerText = `Deseja realmente excluir a tarefa "${titulo}"?`;
+    document.getElementById('delete-form').action = `/delete/${id}`;
+}
+
+function fecharModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+</script>
+{% endblock %}

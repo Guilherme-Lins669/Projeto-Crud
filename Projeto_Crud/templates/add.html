@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Nova Tarefa</h2>
+<form method="POST">
+    <label>Título:</label>
+    <input type="text" name="titulo" required>
+
+    <label>Descrição:</label>
+    <textarea name="descricao"></textarea>
+
+    <label>Data de Vencimento:</label>
+    <input type="date" name="data_vencimento" required>
+
+    <label>Prioridade:</label>
+    <select name="prioridade" required>
+        <option value="Baixa">Baixa</option>
+        <option value="Média">Média</option>
+        <option value="Alta">Alta</option>
+    </select>
+
+    <button type="submit">Salvar</button>
+</form>
+{% endblock %}
