@@ -5,6 +5,7 @@ Um sistema web simples para gerenciamento de tarefas, implementando as operaçõ
 # Dupla
 João Guilherme Borges Lins
 - Back-End e Banco de Dados
+
 Pedro Jonata Damasceno do Nascimento
 - Front-End e Criativo
 ## Tecnologias Utilizadas
