@@ -2,10 +2,10 @@
 
 Um sistema web simples para gerenciamento de tarefas, implementando as operações básicas de CRUD (Create, Read, Update, Delete).
 
-## Dupla
-# João Guilherme Borges Lins
+# Dupla
+## João Guilherme Borges Lins
 - Back-End e Banco de Dados
-# Pedro Jonata Damasceno do Nascimento
+## Pedro Jonata Damasceno do Nascimento
 - Front-End e Criativo
 ## Tecnologias Utilizadas
 
