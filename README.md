@@ -41,3 +41,14 @@ Cada tarefa possui:
    ```bash
    git clone https://github.com/seuusuario/crud_tarefas.git
    cd crud_tarefas
+
+## Crie um ambiente virtual e instale as dependências:
+
+python -m venv venv
+source venv/bin/activate  # Linux
+venv\Scripts\activate     # Windows
+pip install flask
+
+## Execute o servidor:
+
+python app.py
