@@ -38,7 +38,7 @@ Cada tarefa possui:
 ## Instalação e Execução
 
 1. Clone o repositório:
-   ```bash
+   ```
    git clone https://github.com/Guilherme-Lins669/Projeto-Crud.git
    cd crud_tarefas
 
